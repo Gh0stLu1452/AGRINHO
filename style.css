@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
 :root {
     --verde-agro: #1a3a16;
     --verde-semente: #2d5a27;
@@ -12,7 +15,7 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: border-box; 
-    font-family: 'roboto', sans-serif ;
+    font-family: 'Merriweather', serif;
 }
 
 body {
@@ -72,6 +75,10 @@ section.home {
     line-height: 1.5;
 }
 
+section.home h1 {
+    font-family: 'Archivo Black';
+}
+
 footer.rodape {
     background-color: var(--verde-agro);
     color: white;
@@ -112,6 +119,10 @@ section.sobre {
     padding: 30px 20px;
     text-align: center;
     line-height: 1.5;
+}
+
+section.sobre h2 {
+    font-family: 'Archivo Black';
 }
 
 button {

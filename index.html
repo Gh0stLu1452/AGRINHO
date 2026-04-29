@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="/AgroTeen/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="cabecalho">
@@ -31,31 +31,65 @@
 
         <section class="jogos" id="jogos">
             <h2>Nossos jogos</h2>
-            <p>Descubra os jogos disponíveis para se divertir e conhecer mais sobre a agricultura do nosso estado!</p>
+            <p>Descubra os jogos disponíveis para se divertir e conhecer mais sobre a agricultura 
+                do nosso estado!</p>
             <div class="container-jogos">
                 <div class="jogo1">
-                    <img src="/AgroTeen/imgs/selva.jpg" alt="capa do jogo 1" class="img">
+                    <img src="imgs/selva.jpg" alt="capa do jogo 1" class="img">
                     <h3>Jogo 1</h3>
                     <p>Descrição do jogo 1</p>
-                    <a href="/AgroTeen/Jogos/Jogo1/jogo1.html"><button>Jogar</button></a>
+                    <button class="open-modal" data-modal="modal1" type="button">Jogar</button>
                 </div>
+                <dialog id="modal1" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Jogo 1</h2>
+                        <p>Descrição detalhada do jogo 1.</p>
+                        <!-- Conteúdo do jogo 1 aqui -->
+                    </div>
+                </dialog>
                 <div class="jogo2">
                     <img src="" alt="">
                     <h3>Jogo 2</h3>
                     <p>Descrição do jogo 2</p>
-                    <button>Jogar</button>
+                    <button class="open-modal" data-modal="modal2" type="button">Jogar</button>
                 </div>
+                <dialog id="modal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Jogo 2</h2>
+                        <p>Descrição detalhada do jogo 2.</p>
+                        <!-- Conteúdo do jogo 2 aqui -->
+                    </div>
+                </dialog>
                 <div class="jogo3">
                     <img src="" alt="">
                     <h3>Jogo 3</h3>
                     <p>Descrição do jogo 3</p>
-                    <button>Jogar</button>
+                    <button class="open-modal" data-modal="modal3" type="button">Jogar</button>
                 </div>
+                <dialog id="modal3" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Jogo 3</h2>
+                        <p>Descrição detalhada do jogo 3.</p>
+                        <!-- Conteúdo do jogo 3 aqui -->
+                    </div>
+                </dialog>
                 <div class="jogo4">
                     <img src="" alt=""> 
                     <h3>Jogo 4</h3>
                     <p>Descrição do jogo 4</p>
+                    <button class="open-modal" data-modal="modal4" type="button">Jogar</button>
                 </div>
+                <dialog id="modal4" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Jogo 4</h2>
+                        <p>Descrição detalhada do jogo 4.</p>
+                        <!-- Conteúdo do jogo 4 aqui -->
+                    </div>
+                </dialog>
             </div>
         </section>
 
@@ -65,8 +99,8 @@
         </section>
     </main>
 
-    <footer class="rodape" id="contato">
-        <p>Contato:
+    <footer class="rodape" id="rodape">
+        <p>&copy; 2026 Luiz Gustavo. Todos os direitos reservados.</p>
 
 </body>
 <script src="script.js"></script>

@@ -3,105 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <!-- icone de plantinha -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+    <title>AgroTeen - Aprenda sobre Agricultura</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contrast.css">
 </head>
 <body>
+
+    <!-- cabeçalho fixo com logo e navegação -->
     <header class="cabecalho">
         <div class="logo">
-            <img src="/AgroTeen/logo-agrinho.png" alt="Logo Agrinho">
-            <img src="/AgroTeen/logo-agroteen.png" alt="Logo AgroTeen">
+            <span class="logo-texto">🌱 AgroTeen</span>
         </div>
-        <nav class="menu">
+        <nav class="menu" id="menuNav">
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#jogos">Jogos</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+
+        <!-- controles de acessibilidade -->
+        <div class="controles-acessibilidade" role="toolbar" aria-label="Opções de acessibilidade">
+            <button class="btn-a11y" id="btnContraste" aria-label="Alternar alto contraste" title="Alto contraste">◑</button>
+            <button class="btn-a11y" id="btnFonteMinus" aria-label="Diminuir tamanho da fonte" title="Diminuir fonte">A-</button>
+            <button class="btn-a11y" id="btnFontePlus" aria-label="Aumentar tamanho da fonte" title="Aumentar fonte">A+</button>
+            <button class="btn-a11y" id="btnOuvir" aria-label="Ouvir conteúdo da página" title="Ouvir texto">🔊</button>
+        </div>
+
+        <!-- botão p abrir o menu no celular -->
+        <button class="botao-menu-mobile" id="botaoMenuMobile" aria-label="Abrir menu">☰</button>
     </header>
 
     <main>
 
-        <section class="home" id="home">
-            <h1>Bem-vindo ao AgroTeen!</h1>
-            <p>Conheça a agricultura do Paraná de forma divertida e educativa.</p>
-            <p>Aproveite os seguintes jogos para aprender mais sobre a agricultura paranaense!</p>
-        </section>
-
-        <section class="jogos" id="jogos">
-            <h2>Nossos jogos</h2>
-            <p>Descubra os jogos disponíveis para se divertir e conhecer mais sobre a agricultura 
-                do nosso estado!</p>
-            <div class="container-jogos">
-                <div class="jogo">
-                    <img src="imgs/FazendeiroSegurandoPlanta.jpg" alt="capa do jogo 1, um fazendeiro segurando uma planta" class="img">
-                    <h3>Quizz Agro</h3>
-                    <p>Você conhece as melhores opções para uma agricultura sustentável?</p>
-                    <button class="open-modal" data-modal="modal1" type="button">Jogar</button>
-                </div>
-                <dialog id="modal1" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2>Jogo 1</h2>
-                        <p>Descrição detalhada do jogo 1.</p>
-                        <!-- Conteúdo do jogo 1 aqui -->
-                    </div>
-                </dialog>
-                <div class="jogo">
-                    <img src="/imgs/TratorComContainer.jpg" alt="capa do jogo 2, um trator com um container">
-                    <h3>Do campo a cidade</h3>
-                    <p>Venha descobrir como o alimento chega até você!</p>
-                    <button class="open-modal" data-modal="modal2" type="button">Jogar</button>
-                </div>
-                <dialog id="modal2" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2>Jogo 2</h2>
-                        <p>Descrição detalhada do jogo 2.</p>
-                        <!-- Conteúdo do jogo 2 aqui -->
-                    </div>
-                </dialog>
-                <div class="jogo">
-                    <img src="imgs/MulherSegurandoUmTabletNoCampo.jpg" alt="capa do jogo 3, uma mulher segurando um tablet no campo">
-                    <h3>Verdade ou Mito?</h3>
-                    <p>Descubra se as afirmações sobre agricultura são verdadeiras ou mitos!</p>
-                    <button class="open-modal" data-modal="modal3" type="button">Jogar</button>
-                </div>
-                <dialog id="modal3" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2>Verdade ou Mito?</h2>
-                        <p>Descubra se as afirmações sobre agricultura são verdadeiras ou mitos!</p>
-                        <!-- Conteúdo do jogo 3 aqui -->
-                    </div>
-                </dialog>
-                <div class="jogo">
-                    <img src="" alt=""> 
-                    <h3>Jogo 4</h3>
-                    <p>Descrição do jogo 4</p>
-                    <button class="open-modal" data-modal="modal4" type="button">Jogar</button>
-                </div>
-                <dialog id="modal4" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2>Jogo 4</h2>
-                        <p>Descrição detalhada do jogo 4.</p>
-                        <!-- Conteúdo do jogo 4 aqui -->
-                    </div>
-                </dialog>
+        <!-- seção inicial (hero) -->
+        <section class="inicio" id="inicio">
+            <div class="inicio-conteudo">
+                <h1>Bem-vindo ao AgroTeen!</h1>
+                <p>Conheça a agricultura do Paraná de forma divertida e educativa.</p>
+                <p>Aproveite nossos jogos interativos para aprender sobre a agricultura paranaense!</p>
+                <a href="#jogos" class="botao-destaque">Ver os Jogos  👇</a>
             </div>
         </section>
 
-        <section class="sobre" id="sobre">
-            <h2>Sobre o projeto</h2>
-            <p>O AgroTeen é um projeto desenvolvido para promover a educação agrícola entre os jovens do Paraná. Nosso objetivo é tornar o aprendizado sobre agricultura divertido e acessível, utilizando jogos interativos e conteúdos educativos para despertar o interesse dos adolescentes pela agricultura e suas práticas sustentáveis.</p>
+        <!-- Seção de jogos -->
+        <section class="jogos" id="jogos">
+            <h2>Nossos Jogos</h2>
+            <p class="subtitulo-jogos">Escolha um jogo e aprenda sobre a agricultura paranaense!</p>
+
+            <div class="container-jogos">
+
+                <!-- Jogo 1: Quizz Agro -->
+                <div class="jogo">
+                    <span class="jogo-badge">Quiz</span>
+                    <img src="imgs/FazendeiroSegurandoPlanta.jpg"
+                         alt="Fazendeiro segurando uma muda de planta verde em uma lavoura paranaense" class="jogo-imagem">
+                    <div class="jogo-info">
+                        <h3>Quizz Agro</h3>
+                        <p>Você conhece as melhores opções para uma agricultura sustentável?</p>
+                        <button class="botao-jogar abrir-modal"
+                                data-modal="modal-quiz" type="button">▶ Jogar</button>
+                    </div>
+                </div>
+
+                <!-- Jogo 2: Do Campo à Cidade -->
+                <div class="jogo">
+                    <span class="jogo-badge">Explorar</span>
+                    <img src="imgs/TratorComContainer.jpg"
+                         alt="Trator transportando container de grãos em estrada rural do Paraná" class="jogo-imagem">
+                    <div class="jogo-info">
+                        <h3>Do Campo à Cidade</h3>
+                        <p>Venha descobrir como o alimento chega até você!</p>
+                        <button class="botao-jogar abrir-modal"
+                                data-modal="modal-campo-cidade" type="button">▶ Jogar</button>
+                    </div>
+                </div>
+
+                <!-- Jogo 3: Verdade ou Mito? -->
+                <div class="jogo">
+                    <span class="jogo-badge">Desafio</span>
+                    <img src="imgs/MulherSegurandoUmTabletNoCampo.jpg"
+                         alt="Mulher agricultora segurando um tablet digital em meio à lavoura" class="jogo-imagem">
+                    <div class="jogo-info">
+                        <h3>Verdade ou Mito?</h3>
+                        <p>Descubra se as afirmações sobre agricultura são verdades ou mitos!</p>
+                        <button class="botao-jogar abrir-modal"
+                                data-modal="modal-verdade-mito" type="button">▶ Jogar</button>
+                    </div>
+                </div>
+
+                <!-- Jogo 4: Adivinhe a Safra -->
+                <div class="jogo">
+                    <span class="jogo-badge">Adivinhar</span>
+                    <img src="imgs/FazendeiroSegurandoPlanta.jpg"
+                         alt="Fazendeiro examinando culturas agrícolas no campo do Paraná" class="jogo-imagem">
+                    <div class="jogo-info">
+                        <h3>Adivinhe a Safra</h3>
+                        <p>Descubra qual cultura agrícola está sendo descrita pelas dicas!</p>
+                        <button class="botao-jogar abrir-modal"
+                                data-modal="modal-safra" type="button">▶ Jogar</button>
+                    </div>
+                </div>
+
+            </div>
         </section>
+
+        <!-- Seção "Sobre o Projeto" -->
+        <section class="sobre" id="sobre">
+            <div class="sobre-conteudo">
+                <h2>Sobre o Projeto</h2>
+                <p>
+                    O <strong>AgroTeen</strong> é um projeto desenvolvido para promover a educação
+                    agrícola entre os jovens do Paraná. Nosso objetivo é tornar o aprendizado sobre
+                    agricultura divertido e acessível, utilizando jogos interativos e conteúdos
+                    educativos para despertar o interesse dos adolescentes pelas práticas sustentáveis
+                    do campo.
+                </p>
+                <!-- Números de destaque -->
+                <div class="estatisticas">
+                    <div class="estatistica">
+                        <span class="numero">4</span>
+                        <span class="rotulo">Jogos</span>
+                    </div>
+                    <div class="estatistica">
+                        <span class="numero">15</span>
+                        <span class="rotulo">Questões</span>
+                    </div>
+                    <div class="estatistica">
+                        <span class="numero">🌾</span>
+                        <span class="rotulo">Educativo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
     </main>
 
+    <!-- Rodapé -->
     <footer class="rodape" id="rodape">
-        <p>&copy; 2026 Luiz Gustavo. Todos os direitos reservados.</p>
+        <p>🌾 &copy; 2026 <strong>AgroTeen</strong> — Projeto Agrinho | Luiz Gustavo</p>
+        <p class="rodape-subtexto">Promovendo a educação agrícola no Paraná</p>
+    </footer>
 
+
+    <!-- ===== MODAIS DOS JOGOS ===== -->
+
+    <!-- Modal: Quizz Agro -->
+    <dialog id="modal-quiz" class="modal">
+        <div class="modal-conteudo">
+            <button class="fechar-modal" data-modal="modal-quiz">&times;</button>
+            <!-- O quiz é gerado dinamicamente pelo JavaScript -->
+            <div id="area-quiz"></div>
+        </div>
+    </dialog>
+
+    <!-- Modal: Do Campo à Cidade (informativo com etapas) -->
+    <dialog id="modal-campo-cidade" class="modal">
+        <div class="modal-conteudo">
+            <button class="fechar-modal" data-modal="modal-campo-cidade">&times;</button>
+            <h2 class="quiz-titulo">🚜 Do Campo à Cidade</h2>
+            <p style="color:#666; font-size:0.9rem; margin-bottom:15px;">
+                Veja o caminho que o alimento percorre antes de chegar na sua mesa!
+            </p>
+            <!-- Etapas do processo agrícola -->
+            <div class="etapas-container">
+                <div class="etapa">
+                    <span class="etapa-numero">1</span>
+                    <div>
+                        <h3>🌱 Plantio</h3>
+                        <p>O agricultor prepara o solo e planta as sementes. No Paraná, o plantio
+                        direto é muito utilizado para preservar a qualidade do solo.</p>
+                    </div>
+                </div>
+                <div class="etapa">
+                    <span class="etapa-numero">2</span>
+                    <div>
+                        <h3>🌿 Cultivo</h3>
+                        <p>A planta cresce e o agricultor cuida da lavoura, controlando pragas
+                        e garantindo a irrigação adequada.</p>
+                    </div>
+                </div>
+                <div class="etapa">
+                    <span class="etapa-numero">3</span>
+                    <div>
+                        <h3>🌾 Colheita</h3>
+                        <p>Quando o produto está maduro, as colheitadeiras entram em ação.
+                        A tecnologia moderna tornou esse processo muito mais eficiente!</p>
+                    </div>
+                </div>
+                <div class="etapa">
+                    <span class="etapa-numero">4</span>
+                    <div>
+                        <h3>🏭 Processamento</h3>
+                        <p>O alimento vai para a indústria, onde é lavado, classificado,
+                        embalado e preparado para a venda.</p>
+                    </div>
+                </div>
+                <div class="etapa">
+                    <span class="etapa-numero">5</span>
+                    <div>
+                        <h3>🛒 Supermercado</h3>
+                        <p>Finalmente, o produto chega ao mercado e você pode comprá-lo.
+                        Da fazenda à sua mesa, um longo caminho foi percorrido!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Modal: Verdade ou Mito? -->
+    <dialog id="modal-verdade-mito" class="modal">
+        <div class="modal-conteudo">
+            <button class="fechar-modal" data-modal="modal-verdade-mito">&times;</button>
+            <!-- O jogo é gerado dinamicamente pelo JavaScript -->
+            <div id="area-verdade-mito"></div>
+        </div>
+    </dialog>
+
+    <!-- Modal: Adivinhe a Safra -->
+    <dialog id="modal-safra" class="modal">
+        <div class="modal-conteudo">
+            <button class="fechar-modal" data-modal="modal-safra">&times;</button>
+            <!-- O jogo é gerado dinamicamente pelo JavaScript -->
+            <div id="area-safra"></div>
+        </div>
+    </dialog>
+
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

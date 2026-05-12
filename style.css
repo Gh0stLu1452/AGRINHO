@@ -362,13 +362,13 @@ main {
     border: none;
     border-radius: 16px;
     padding: 0;
-    max-width: 600px;
-    width: 92%;
-    margin: auto;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    inset: 0;
+    margin: auto;
+    max-width: 800px;
+    width: 85%;
+    max-height: 90vh;
+    overflow: auto;
     box-shadow: 0 12px 45px rgba(0, 0, 0, 0.35);
     /* animacao ao abrir */
     animation: entrarModal 0.3s ease;
@@ -377,11 +377,11 @@ main {
 @keyframes entrarModal {
     from {
         opacity: 0;
-        transform: translate(-50%, -48%) scale(0.92);
+        transform: scale(0.92);
     }
     to {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
     }
 }
 
@@ -393,7 +393,7 @@ main {
 
 .modal-conteudo {
     padding: 30px 28px;
-    max-height: 82vh;
+    max-height: 100%;
     overflow-y: auto;
     position: relative;
 }
@@ -761,7 +761,7 @@ main {
     .sobre p { font-size: .93rem; }
     .estatisticas { gap: 25px; }
     .container-jogos { grid-template-columns: 1fr; }
-    .modal { width: 95%; max-height: 90dvh; }
+    .modal { width: 90%; max-height: 90dvh; }
     .modal-conteudo { padding: 22px 16px; max-height: 88dvh; }
     .botoes-verdade-mito { flex-direction: column; align-items: stretch; }
     .grade-opcoes-safra { grid-template-columns: 1fr; }

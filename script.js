@@ -532,15 +532,21 @@ function exibirResultadoSafra() {
 
 // alto contraste
 const btnContraste = document.getElementById('btnContraste');
-if (localStorage.getItem('altoContraste') === '1') {
-    document.body.classList.add('alto-contraste');
-    btnContraste.classList.add('ativo');
-}
+const estiloNormal = document.getElementById('estiloNormal');
+const estiloContraste = document.getElementById('estiloContraste');
+const contrasteAtivo = localStorage.getItem('altoContraste') === '1';
+
+estiloNormal.disabled = false; // mantém o CSS base sempre ativo
+estiloContraste.disabled = !contrasteAtivo;
+document.body.classList.toggle('alto-contraste', contrasteAtivo);
+btnContraste.classList.toggle('ativo', contrasteAtivo);
+
 btnContraste.addEventListener('click', () => {
-    document.body.classList.toggle('alto-contraste');
-    const ativo = document.body.classList.contains('alto-contraste');
-    btnContraste.classList.toggle('ativo', ativo);
-    localStorage.setItem('altoContraste', ativo ? '1' : '0');
+    const usarContraste = estiloContraste.disabled;
+    estiloContraste.disabled = !usarContraste;
+    document.body.classList.toggle('alto-contraste', !estiloContraste.disabled);
+    btnContraste.classList.toggle('ativo', !estiloContraste.disabled);
+    localStorage.setItem('altoContraste', estiloContraste.disabled ? '0' : '1');
 });
 
 // tamanho da fonte (A+ / A-)

@@ -415,7 +415,6 @@ main {
 
 .fechar-modal:hover {
     color: #333;
-    transform: rotate(90deg);
 }
 
 /* titulo e barra de progresso dos jogos */

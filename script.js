@@ -388,7 +388,7 @@ const culturasSafra = [
             "🌳 Minha planta é um arbusto que gosta de altitudes elevadas.",
             "🇧🇷 O Brasil é o maior produtor mundial da minha espécie."
         ],
-        opcoes:  ["Chá", "Cacau", "Café", "Erva-mate"],
+        opcoes:  ["Chá", "água", "Café", "Erva-mate"],
         correta: 2
     },
     {

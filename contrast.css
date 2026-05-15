@@ -68,3 +68,71 @@ body{
 .botao-jogar:hover {
     background-color: var(--hover-contraste);
 }
+
+.sobre {
+    background: linear-gradient(135deg,var(--cinza-fundo-contraste), var(--fundo-contraste));
+    color: var(--texto-geral-contraste);
+}
+
+.estatisticas {
+    color: var(--destaque-contraste);
+}
+
+.numero{
+    color: var(--destaque-contraste);
+}
+
+.rodape {
+    background: linear-gradient(135deg, var(--cinza-fundo-contraste), var(--cinza-fundo-contraste));
+    color: var(--texto-geral-contraste);
+}
+
+.modal {
+    background-color: var(--fundo-contraste);
+}
+
+.quiz-titulo {
+    color: var(--destaque-contraste);
+}
+
+.pergunta-quiz {
+    color: var(--texto-geral-contraste);
+}
+
+.opcao-quiz {
+    font-weight: bolder;
+    background-color: var(--cinza-fundo-contraste);
+    color: var(--texto-geral-contraste);
+}
+
+.opcao-quiz:hover:not(:disabled) {
+    font-weight: bolder;
+    border-color: var(--destaque-contraste);
+    background-color: var(--hover-contraste);
+    color: var(--fundo-contraste)
+}
+
+.resultado-titulo {
+    color: var(--destaque-contraste);
+}
+
+.resultado-pontuacao {
+    color: var(--destaque-contraste)
+}
+
+.resultado-mensagem {
+    color: var(--texto-geral-contraste);
+}
+
+.botao-reiniciar {
+    background-color: var(--botoes-contraste);
+    color: var(--fundo-contraste);
+}
+
+.botao-reiniciar:hover {
+    background-color: var(--hover-contraste);
+}
+
+.etapas-h3 {
+    color: var(--texto-geral-contraste);
+}

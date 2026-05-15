@@ -403,18 +403,27 @@ main {
     position: absolute;
     top: 14px;
     right: 18px;
-    background: none;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
     border: none;
+    border-radius: 50%;
     font-size: 1.9rem;
     color: #aaa;
     cursor: pointer;
     line-height: 1;
     padding: 0;
-    transition: color 0.2s, transform 0.2s;
+    transform-origin: center center;
+    transition: color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
 }
 
 .fechar-modal:hover {
     color: #333;
+    transform: rotate(90deg);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* titulo e barra de progresso dos jogos */
@@ -564,6 +573,12 @@ main {
     flex-direction: column;
     gap: 14px;
     margin-top: 18px;
+}
+
+.campo-cidade-subtitulo {
+    color: #666;
+    font-size:0.9rem;
+    margin-bottom:15px;
 }
 
 .etapa {

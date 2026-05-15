@@ -28,11 +28,11 @@ body{
 }
 
 .inicio::before {
-    background: rgba(149, 219, 69, 0.1);
+    background: rgba(135, 136, 133, 0.1);
 }
 
 .inicio::after {
-    background: rgba(108, 189, 15, 0);
+    background: rgba(17, 27, 5, 0);
 }
 
 .jogos {
@@ -89,6 +89,16 @@ body{
 
 .modal {
     background-color: var(--fundo-contraste);
+    color: var(--texto-geral-contraste);
+}
+
+.fechar-modal {
+    color: var(--texto-geral-contraste);
+}
+
+.fechar-modal:hover {
+    color: var(--destaque-contraste);
+    background-color: #474747;
 }
 
 .quiz-titulo {
@@ -135,4 +145,47 @@ body{
 
 .etapas-h3 {
     color: var(--texto-geral-contraste);
+}
+
+.etapa {
+    background-color: var(--cinza-fundo-contraste);
+    border-color: var(--botoes-contraste);
+    color: var(--texto-geral-contraste);
+}
+
+.etapa-numero {
+    background-color: var(--destaque-contraste);
+}
+
+.etapa h3 {
+    color: var(--destaque-contraste);
+}
+
+.etapa p {
+    color: var(--texto-geral-contraste);
+}
+
+.campo-cidade-subtitulo {
+    color: var(--texto-geral-contraste);
+}
+
+.afirmacao-destaque {
+    background-color: var(--cinza-fundo-contraste);
+    color: var(--texto-geral-contraste)
+}
+
+.caixa-dicas {
+    background-color: var(--cinza-fundo-contraste);
+    color: var(--texto-geral-contraste);
+}
+
+.botao-mais-dica {
+    border-color: var(--botoes-contraste);
+    color: var(--texto-geral-contraste);
+}
+
+.botao-mais-dica:hover {
+    background-color: var(--hover-contraste);
+    color: var(--fundo-contraste);
+    font-weight: bold;
 }
